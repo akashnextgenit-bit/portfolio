@@ -1,0 +1,4 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import request from 'supertest'; process.env.NODE_ENV='test'; const { app }=await import('../server.js');
+test('health endpoint responds without database access',async()=>{const response=await request(app).get('/health');assert.equal(response.status,200);assert.deepEqual(response.body,{status:'ok'});});
+test('unknown API route returns structured 404',async()=>{const response=await request(app).get('/api/v1/unknown');assert.equal(response.status,404);assert.match(response.body.error.message,/Route not found/);});
+test('contact endpoint rejects invalid input before database access',async()=>{const response=await request(app).post('/api/v1/enquiries').send({name:'A',email:'not-an-email',message:'short'});assert.equal(response.status,422);assert.equal(response.body.error.message,'Validation failed');});

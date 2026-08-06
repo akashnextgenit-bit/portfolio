@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({job:{type:mongoose.Schema.Types.ObjectId,ref:'Job',required:true,index:true},name:{type:String,required:true,trim:true,maxlength:100},email:{type:String,required:true,trim:true,lowercase:true},coverLetter:{type:String,trim:true,maxlength:5000},resume:{url:{type:String,required:true},filename:{type:String,required:true}},status:{type:String,enum:['new','reviewing','rejected','accepted'],default:'new',index:true}},{timestamps:true}); export const Application=mongoose.model('Application',schema);

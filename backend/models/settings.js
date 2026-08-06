@@ -1,0 +1,1 @@
+import mongoose from 'mongoose'; const schema=new mongoose.Schema({key:{type:String,default:'site',unique:true},meta:{title:String,description:String,ogImage:String,canonical:String},updatedBy:{type:mongoose.Schema.Types.ObjectId,ref:'Admin'}},{timestamps:true}); export const Settings=mongoose.model('Settings',schema);
