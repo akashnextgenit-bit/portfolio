@@ -1,8 +1,136 @@
-import { projects, services, technologies } from './config.js';
+import {
+  services, technologies, academicServices, academicIncludes, academicTech,
+  whyChooseUs, stats, processSteps, skills, timeline,
+  showcaseStats, showcaseServices, showcaseTech
+} from './config.js';
+import { icon, techIcon, showcaseIcon } from './academic-icons.js';
+
 const byId = (id) => document.getElementById(id);
+
+function renderShowcase() {
+  const statsEl = byId('showcase-stats');
+  if (statsEl) {
+    statsEl.innerHTML = showcaseStats.map(([key, num, label]) => `
+      <div class="showcase-stat">
+        <span class="showcase-stat-icon" aria-hidden="true">${icon(key)}</span>
+        <div><strong class="stat-number" data-target="${num}">0</strong><small>${label}</small></div>
+      </div>`).join('');
+  }
+
+  const showcaseImages = {
+    webdev: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=900&auto=format&fit=crop',
+    mobiledev: 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=800&auto=format&fit=crop',
+    aiml: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=900&auto=format&fit=crop',
+    cloudsol: 'https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?q=80&w=900&auto=format&fit=crop',
+    academicproj: 'https://images.unsplash.com/photo-1758270705317-3ef6142d306f?q=80&w=900&auto=format&fit=crop',
+    automation: 'https://images.unsplash.com/photo-1759752393975-7ca7b302fcc6?q=80&w=900&auto=format&fit=crop',
+    uiux: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=900&auto=format&fit=crop',
+    consulting: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=900&auto=format&fit=crop'
+  };
+
+  const cardsEl = byId('showcase-cards');
+  if (cardsEl) {
+    cardsEl.innerHTML = showcaseServices.map(([key, title, desc], i) => {
+      const img = showcaseImages[key];
+      return `
+      <li class="bento-card${img ? ' has-image' : ''}" style="--i:${i}" data-key="${key}">
+        ${img ? `<img class="bento-card-img" src="${img}" alt="" loading="lazy" width="700" height="700">` : ''}
+        <div class="bento-card-body">
+          <span class="bento-card-icon" aria-hidden="true">${showcaseIcon(key)}</span>
+          <h3>${title}</h3>
+          <p>${desc}</p>
+          <a class="bento-card-arrow" href="#contact" aria-label="Ask about ${title}">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </li>`;
+    }).join('');
+  }
+
+  const techList = byId('tech-slider-list');
+  if (techList) {
+    const loop = showcaseTech.concat(showcaseTech);
+    techList.innerHTML = loop.map((name) => `
+      <li><span class="tech-slider-icon" aria-hidden="true">${techIcon(name)}</span>${name}</li>`).join('');
+  }
+}
+
+function renderServices() {
+  // Legacy service grid — no longer rendered; kept only if #services-grid exists elsewhere.
+  const grid = byId('services-grid');
+  if (!grid) return;
+  grid.innerHTML = services.map(([icon, title, description]) => `
+    <li class="service-card reveal">
+      <span class="service-icon" aria-hidden="true">${icon}</span>
+      <h3>${title}</h3>
+      <p>${description}</p>
+    </li>`).join('');
+}
+
+function renderAcademic() {
+  byId('academic-service-cards').innerHTML = academicServices.map(([key, title, desc], i) => `
+    <li class="academic-service-card reveal" style="--d:${i % 2}">
+      <span class="academic-service-icon" aria-hidden="true">${icon(key)}</span>
+      <h4>${title}</h4>
+      <p>${desc}</p>
+    </li>`).join('');
+
+  byId('academic-feature-strip').innerHTML = academicIncludes.map(([key, title, desc]) => `
+    <li class="academic-feature-card reveal">
+      <span class="academic-feature-icon" aria-hidden="true">${icon(key)}</span>
+      <div><h4>${title}</h4><p>${desc}</p></div>
+    </li>`).join('');
+
+  byId('academic-tech-pills').innerHTML = academicTech.map((name) => `
+    <li class="academic-tech-pill"><span class="academic-tech-dot" aria-hidden="true">${techIcon(name)}</span>${name}</li>`).join('');
+}
+
+function renderWhy() {
+  byId('why-grid').innerHTML = whyChooseUs.map(([icon, title, desc]) => `
+    <li class="why-card reveal">
+      <span class="why-icon" aria-hidden="true">${icon}</span>
+      <h3>${title}</h3>
+      <p>${desc}</p>
+    </li>`).join('');
+  byId('stats-row').innerHTML = stats.map(([num, label]) => `
+    <div class="stat-item reveal"><p class="stat-number" data-target="${num}">0</p><p class="stat-label">${label}</p></div>`).join('');
+}
+
+function renderProcess() {
+  byId('process-track').innerHTML = processSteps.map(([title, desc], i) => `
+    <div class="process-step reveal">
+      <div class="process-index">${String(i + 1).padStart(2, '0')}</div>
+      <h4>${title}</h4>
+      <p>${desc}</p>
+    </div>`).join('');
+}
+
+function renderAboutExtras() {
+  const skillBars = byId('skill-bars');
+  if (skillBars) {
+    skillBars.innerHTML = skills.map(([name, pct]) => `
+      <div class="skill-item">
+        <div class="skill-bar-row"><span>${name}</span><span>${pct}%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="${pct}"></div></div>
+      </div>`).join('');
+  }
+  const timelineList = byId('timeline-list');
+  if (timelineList) {
+    timelineList.innerHTML = timeline.map(([year, title, desc]) => `
+      <div class="timeline-item"><p class="timeline-year">${year}</p><h4>${title}</h4><p>${desc}</p></div>`).join('');
+  }
+}
+
+function renderFooter() {
+  byId('footer-services').innerHTML = services.slice(0, 5).map(([, title]) => `<li><a href="#services">${title}</a></li>`).join('');
+}
+
 export function renderContent() {
-  byId('technology-list').innerHTML = technologies.map((item) => `<li>${item}</li>`).join('');
-  byId('services-grid').innerHTML = services.map(([icon, title, description]) => `<li class="service-card reveal"><span class="service-icon" aria-hidden="true">${icon}</span><h3>${title}</h3><p>${description}</p></li>`).join('');
-  byId('projects-grid').innerHTML = projects.map((project) => `<li class="project-card reveal"><div class="project-art">${project.name}</div><div class="project-content"><span class="project-tag">${project.type}</span><h3>${project.name}</h3><p>${project.description}</p></div></li>`).join('');
+  renderShowcase();
+  renderAcademic();
+  renderWhy();
+  renderProcess();
+  renderAboutExtras();
+  renderFooter();
   byId('year').textContent = new Date().getFullYear();
 }

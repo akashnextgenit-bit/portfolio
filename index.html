@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Akash NextGen IT provides custom software, websites, mobile applications, UI/UX design, AI solutions, APIs, cloud solutions, and IT consulting from Nagpur, Maharashtra, India.">
-  <meta name="theme-color" content="#0B1F3A">
+  <meta name="description" content="Akash NextGen IT is a premium software development agency in Nagpur, Maharashtra — custom software, websites, mobile apps, UI/UX design, AI solutions, APIs, cloud, and academic project development.">
+  <meta name="theme-color" content="#0F172A">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <title>Akash NextGen IT — Innovating Tomorrow, Today.</title>
+  <title>Akash NextGen IT </title>
   <link rel="canonical" href="https://akashnextgenit.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Akash NextGen IT">
-  <meta property="og:title" content="Akash NextGen IT — Innovating Tomorrow, Today.">
-  <meta property="og:description" content="IT Services &amp; IT Consulting — custom software, websites, mobile apps, AI solutions, APIs, cloud solutions, and IT consulting.">
+  <meta property="og:title" content="Akash NextGen IT — Premium Software &amp; Digital Product Studio">
+  <meta property="og:description" content="Custom software, websites, mobile apps, AI solutions, APIs, cloud solutions, IT consulting and academic project development.">
   <meta property="og:url" content="https://akashnextgenit.vercel.app/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Akash NextGen IT — Innovating Tomorrow, Today.">
+  <meta name="twitter:title" content="Akash NextGen IT — Premium Software &amp; Digital Product Studio">
   <meta name="twitter:description" content="IT Services &amp; IT Consulting from Nagpur, Maharashtra, India.">
   <link rel="icon" href="logo-256.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important;} .site-header{background:color-mix(in srgb, var(--surface) 82%, transparent)!important; border-bottom-color:var(--border)!important;} .site-header .brand span, .site-header .desktop-nav a{color:var(--text)!important;}</style></noscript>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"Akash NextGen IT","url":"https://akashnextgenit.vercel.app/","description":"IT Services & IT Consulting.","email":"akashnextgenit@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Nagpur","addressRegion":"Maharashtra","addressCountry":"IN"},"founder":{"@type":"Person","name":"Akash Chachere"},"sameAs":["https://www.linkedin.com/company/akash-nextgen-it/","https://www.instagram.com/akashnextgenit/","https://github.com/AkashChachere"]}
   </script>
@@ -32,15 +34,14 @@
   <header class="site-header" id="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#hero" aria-label="Akash NextGen IT home">
-        <img src="logo-256.png" width="46" height="46" alt="Akash NextGen IT logo">
+        <img src="logo-256.png" width="42" height="42" alt="Akash NextGen IT logo">
         <span>Akash NextGen IT<small>Innovating Tomorrow, Today.</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#blog">Blog</a><a href="#careers">Careers</a><a href="#contact">Contact</a>
+        <a href="#services">Services</a><a href="#academic">Academic Projects</a><a href="#about">About</a><a href="#careers">Careers</a><a href="#contact">Contact</a>
       </nav>
       <div class="nav-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span aria-hidden="true">◐</span></button>
-        <a class="button button-primary desktop-cta" href="#contact">Start a conversation</a>
+        <a class="button button-primary button-sm desktop-cta" href="#contact">Get Free Quote<svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <button class="menu-button" id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -48,59 +49,507 @@
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <nav aria-label="Mobile navigation">
-      <a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#blog">Blog</a><a href="#careers">Careers</a><a href="#contact">Contact</a>
-      <a class="button button-primary" href="#contact">Start a conversation</a>
+      <a href="#services">Services</a><a href="#academic">Academic Projects</a><a href="#about">About</a><a href="#careers">Careers</a><a href="#contact">Contact</a>
+      <a class="button button-primary" href="#contact">Get Free Quote</a>
     </nav>
   </div>
 
   <main id="main">
     <section class="hero" id="hero" aria-labelledby="hero-title">
-      <div class="hero-background" aria-hidden="true"><span class="orb orb-one"></span><span class="orb orb-two"></span><span class="grid"></span></div>
+      <div class="hero-media" aria-hidden="true">
+        <canvas class="hero-canvas" id="hero-canvas"></canvas>
+        <div class="hero-scrim"></div>
+        <span class="grid"></span><span class="noise"></span>
+        <span class="orb orb-one"></span><span class="orb orb-two"></span>
+      </div>
       <div class="container hero-layout">
-        <div class="hero-copy reveal is-visible">
-          <p class="eyebrow"><span></span> IT Services &amp; IT Consulting</p>
-          <h1 id="hero-title">Building <em>Next Generation</em> Digital Solutions</h1>
-          <p class="hero-lead">Akash NextGen IT helps organizations build thoughtful software, web platforms, mobile applications, and modern digital experiences.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#contact">Start a project</a><a class="button button-secondary" href="#services">Explore services</a></div>
-          <ul class="principle-list" aria-label="Our development principles"><li>Modern technology stack</li><li>Scalable architecture</li><li>Secure development</li><li>End-to-end support</li></ul>
+        <div class="hero-copy">
+          <div class="badge-row reveal-hero" style="--d:0">
+            <span class="availability-badge"><i></i> Available for new projects</span>
+            <span class="remote-badge">🌐 Remote-first &middot; works across time zones</span>
+          </div>
+          <h1 id="hero-title" class="reveal-hero" style="--d:1">Software engineering, <em>designed like a product</em></h1>
+          <p class="hero-lead reveal-hero" style="--d:2">Akash NextGen IT is a software studio designing and building custom software, websites, mobile apps and AI-powered products for clients anywhere in the world with senior-level craft, end to end.</p>
+          <div class="hero-actions reveal-hero" style="--d:3">
+            <a class="button button-primary" href="#contact">Get Free Quote</a>
+            <a class="button button-secondary" href="#services">Explore Services</a>
+          </div>
         </div>
-        <div class="hero-visual reveal is-visible" aria-hidden="true">
-          <div class="orbit orbit-large"></div><div class="orbit orbit-small"></div><div class="core"></div>
-          <span class="visual-card card-one">Custom software</span><span class="visual-card card-two">AI solutions</span><span class="visual-card card-three">Cloud ready</span><span class="visual-card card-four">Mobile apps</span>
+        <div class="hero-visual reveal-hero" style="--d:2" id="hero-visual">
+          <div class="hero-photo-frame" id="hero-photo-frame">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Modern software developer workspace with multiple monitors showing code" width="1200" height="1400" loading="eager">
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="technology-strip" aria-labelledby="technology-title">
-      <div class="container"><p id="technology-title">Technologies we work with</p><ul id="technology-list" class="technology-list" aria-label="Technologies we work with"></ul></div>
+    <section id="services" class="showcase" aria-labelledby="services-title">
+      <div class="container">
+        <div class="showcase-top">
+          <div class="showcase-copy reveal">
+            <p class="eyebrow"><span></span> Our expertise</p>
+            <h2 id="services-title">Technology Services<br>For <em>Ambitious Ideas</em></h2>
+            <p>We design, engineer and scale modern digital products with enterprise-grade quality, helping startups, businesses and students transform ideas into impactful digital solutions.</p>
+          </div>
+          <div class="showcase-stats-card reveal" id="showcase-stats" aria-label="Our track record"></div>
+        </div>
+
+        <div class="showcase-center">
+          <ul id="showcase-cards" class="bento-grid"></ul>
+        </div>
+      </div>
+
+      <div class="tech-slider-wrap reveal">
+        <div class="container tech-slider-head">
+          <p>Technologies we work with</p>
+          <div class="tech-slider-nav">
+            <button type="button" data-dir="-1" aria-label="Scroll technologies left"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" data-dir="1" aria-label="Scroll technologies right"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <div class="tech-slider-track" id="tech-slider-track">
+          <ul id="tech-slider-list" class="tech-slider-list"></ul>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="cta-banner showcase-cta reveal">
+          <div><h3>Ready To Build Something Extraordinary?</h3><p>Let's transform your ideas into modern digital products that deliver measurable business results.</p></div>
+          <div class="showcase-cta-actions">
+            <a class="button button-cta-white" href="#contact">Start Project<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="button button-secondary" href="#contact">Schedule Meeting</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="services" aria-labelledby="services-title">
-      <div class="container"><div class="section-heading reveal"><p class="eyebrow"><span></span> What we do</p><h2 id="services-title">Technology services for ambitious ideas</h2><p>Focused engineering and consulting services designed around your requirements.</p></div><ul id="services-grid" class="card-grid services-grid"></ul></div>
+    <section class="surface academic-section" id="academic" aria-labelledby="academic-title">
+      <div class="container">
+
+        <div class="academic-top">
+          <div class="academic-copy reveal">
+            <span class="academic-badge">🎓 For students</span>
+            <h2 id="academic-title">Academic <span class="text-grad">Project Development</span></h2>
+            <p class="academic-lead">Build industry-ready academic projects with complete development support, documentation, source code, deployment assistance and viva preparation.</p>
+            <div class="academic-cta-row">
+              <a class="button button-primary" href="#contact">View Projects<svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="button button-secondary" href="#contact">Contact Now</a>
+            </div>
+          </div>
+
+          <div class="academic-services reveal">
+            <p class="academic-services-title">We Develop <span class="text-grad">Projects</span> In</p>
+            <ul id="academic-service-cards" class="academic-service-grid" aria-label="Project categories"></ul>
+          </div>
+        </div>
+
+        <ul id="academic-feature-strip" class="academic-feature-strip" aria-label="What's included"></ul>
+
+        <div class="academic-tech-block reveal">
+          <p class="academic-tech-title">Technologies &amp; Domains We <span class="text-grad">Work With</span></p>
+          <div class="academic-tech-scroll"><ul id="academic-tech-pills" class="academic-tech-row" aria-label="Technologies and domains"></ul></div>
+        </div>
+
+        <div class="academic-bottom-cta reveal">
+          <div class="academic-bottom-copy">
+            <span class="academic-bottom-badge" aria-hidden="true">🎓</span>
+            <h3>Need Your <span class="text-grad">Final Year Project</span>?</h3>
+            <p>Get complete development support from idea to deployment.</p>
+            <div class="academic-cta-row">
+              <a class="button button-primary" href="#contact">View Projects<svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="button button-secondary" href="#contact">Contact Now</a>
+            </div>
+          </div>
+          <div class="academic-bottom-art-right">
+            <img src="https://images.unsplash.com/photo-1758270705518-b61b40527e76?q=80&amp;w=900&amp;auto=format&amp;fit=crop" alt="Group of students collaborating around a laptop on their final year project" loading="lazy" width="900" height="600">
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section class="surface" id="projects" aria-labelledby="projects-title">
-      <div class="container"><div class="section-heading reveal"><p class="eyebrow"><span></span> Our work</p><h2 id="projects-title">Selected projects</h2><p>Projects currently available to explore.</p></div><ul id="projects-grid" class="projects-grid"></ul></div>
+    <section class="surface" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-heading center reveal" style="margin-left:auto;margin-right:auto;"><p class="eyebrow"><span></span> Why choose us</p><h2 id="why-title">Engineering trust into every engagement</h2><p>What working with Akash NextGen IT actually feels like.</p></div>
+        <ul id="why-grid" class="card-grid why-grid"></ul>
+        <div class="stats-row" id="stats-row"></div>
+      </div>
     </section>
 
-    <section id="about" aria-labelledby="about-title">
-      <div class="container about-layout"><div class="section-heading reveal"><p class="eyebrow"><span></span> About Akash NextGen IT</p><h2 id="about-title">Practical technology, thoughtfully delivered.</h2><p>Akash NextGen IT is an IT Services &amp; IT Consulting business based in Nagpur, Maharashtra, India.</p></div><div class="about-card reveal"><p class="about-label">Founder</p><p class="founder-name">Akash Chachere</p><p>We partner on software, web, mobile, design, AI, API, cloud, and technology consulting requirements.</p><a class="text-link" href="#contact">Discuss your requirements <span aria-hidden="true">→</span></a></div></div>
+    <section id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow"><span></span> How we work</p><h2 id="process-title">A clear, five-step process</h2><p>No surprises you always know what happens next.</p></div>
+        <div id="process-track" class="process-track"></div>
+      </div>
     </section>
 
-    <section class="surface" id="blog" aria-labelledby="blog-title"><div class="container"><div class="section-heading reveal"><p class="eyebrow"><span></span> Insights</p><h2 id="blog-title">Blog</h2></div><div class="empty-state reveal"><span aria-hidden="true">⌁</span><p>No articles published yet.</p></div></div></section>
+    <section id="about" class="founder-hero" aria-labelledby="about-title">
+      <div class="about-shapes" aria-hidden="true"><span class="shape-a"></span><span class="shape-b"></span><span class="shape-c"></span></div>
+      <div class="container founder-hero-grid">
 
-    <section id="careers" aria-labelledby="careers-title"><div class="container"><div class="section-heading reveal"><p class="eyebrow"><span></span> Careers</p><h2 id="careers-title">Work with us</h2></div><div class="empty-state reveal"><span aria-hidden="true">⌁</span><p>We're not hiring at the moment.</p></div></div></section>
+        <!-- LEFT: founder profile -->
+        <div class="profile-stack reveal">
+          <div class="profile-card">
+            <img src="assets/owner_img.jpeg" alt="Akash Chachere, Founder &amp; CEO of Akash NextGen IT" width="720" height="924" loading="lazy">
+            <span class="profile-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="7" r="4"/></svg> Founder &amp; CEO</span>
+            <div class="profile-content">
+              <p class="founder-name">Akash Chachere</p>
+              <p class="founder-role">Founder &amp; CEO, Akash NextGen IT</p>
+              <p class="profile-quote">&ldquo;Empowering businesses and students with innovative technology solutions.&rdquo;</p>
+              <p class="profile-signature font-script">Akash Chachere</p>
+              <a class="button button-primary ripple-el" href="https://www.linkedin.com/in/akash-chachere-23371a201/" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                Connect on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </div>
 
-    <section class="surface" id="contact" aria-labelledby="contact-title">
-      <div class="container"><div class="section-heading reveal"><p class="eyebrow"><span></span> Get in touch</p><h2 id="contact-title">Let's build something meaningful.</h2><p>Tell us about your requirements and we’ll get back to you.</p></div><div class="contact-layout reveal">
-        <form class="contact-form" id="contact-form" novalidate><div class="form-row"><div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div></div><div class="field"><label for="subject">Subject <span>(optional)</span></label><input id="subject" name="subject" type="text"></div><div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" required></textarea></div><button class="button button-primary" type="submit">Send message</button><p id="form-status" class="form-status" role="status" aria-live="polite"></p></form>
-        <aside class="contact-details" aria-label="Contact information"><div><p class="contact-label">Email</p><a href="mailto:akashnextgenit@gmail.com">akashnextgenit@gmail.com</a></div><div><p class="contact-label">Location</p><p>Nagpur, Maharashtra, India</p></div><div><p class="contact-label">Website</p><a href="https://akashnextgenit.vercel.app/">akashnextgenit.vercel.app</a></div><div><p class="contact-label">Connect</p><div class="social-links"><a href="https://www.linkedin.com/company/akash-nextgen-it/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a><a href="https://www.instagram.com/akashnextgenit/" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a><a href="https://github.com/AkashChachere" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></div></div><div class="location-note"><span aria-hidden="true">⌖</span> Office location will be updated.</div></aside>
-      </div></div>
+          <div class="profile-mini-cards">
+            <div class="glass-card collab-card reveal">
+              <span class="collab-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+              <div>
+                <h4>Open to Collaborate</h4>
+                <p>Always open to discussing new projects, partnerships and innovative ideas.</p>
+              </div>
+            </div>
+
+            <div class="glass-card connect-card reveal">
+              <h4>Let's Connect</h4>
+              <div class="connect-links">
+                <a href="https://www.linkedin.com/in/akash-chachere-23371a201/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+                <a href="https://github.com/AkashChachere" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3z"/></svg>GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+                <a href="mailto:akashchachere8@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+                <a href="https://akashchachere.vercel.app/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.6-3.6-9S9.6 5.6 12 3Z"/></svg>Portfolio<span class="visually-hidden"> (opens in a new tab)</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: founder story -->
+        <div class="founder-story reveal">
+          <span class="eyebrow-badge">About the Founder</span>
+          <div style="position:relative;">
+            <span class="quote-mark-deco" aria-hidden="true">&rdquo;</span>
+            <h1 id="about-title">Meet The Vision Behind<span class="gradient-text">Akash NextGen IT</span></h1>
+          </div>
+          <div class="story-rule"></div>
+          <p>Akash Chachere founded <strong>Akash NextGen IT</strong> with a simple belief that great software should feel effortless to use and be built with genuine care. What began as a personal passion for solving real problems with code has grown into a studio trusted by startups, businesses and students alike.</p>
+          <p>His work spans Software Development, Artificial Intelligence, Machine Learning and Data Analytics, with deep hands-on expertise in Full Stack Development and modern, production-grade technologies. Every engagement is approached the same way understand the problem deeply, then engineer a solution that's built to last.</p>
+          <div class="tag-row">
+            <span>Software Development</span><span>Artificial Intelligence</span><span>Machine Learning</span>
+            <span>Data Analytics</span><span>Full Stack Development</span><span>Business Solutions</span>
+            <span>Academic Project Development</span><span>Modern Technologies</span>
+          </div>
+          <div class="mission-highlight">
+            <p>Beyond client work, his mission is to help startups and businesses build high-quality software while guiding engineering students through real, industry-ready academic projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="founder-quote-section" aria-labelledby="fq-title">
+      <div class="container">
+        <span class="visually-hidden" id="fq-title">Founder quote</span>
+        <div class="founder-quote-panel reveal">
+          <span class="big-quote-mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>Technology is not just about writing code. It's about solving problems, creating value, and building the future.</blockquote>
+          <div class="quote-signoff">
+            <img src="assets/owner_img.jpeg" alt="" width="46" height="46">
+            <div style="text-align:left;">
+              <p class="signoff-name" style="font-family:'Caveat',cursive;font-size:1.6rem;color:var(--primary-600);">Akash Chachere</p>
+              <p class="signoff-role">Founder &amp; CEO, Akash NextGen IT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="careers" class="careers-section" aria-labelledby="careers-title">
+
+      <!-- 1. Hero -->
+      <div class="container careers-hero">
+        <div class="careers-hero-copy reveal">
+          <p class="eyebrow"><span></span> 🚀 Careers</p>
+          <h2 id="careers-title">Build your career.<br><em>Shape the future.</em></h2>
+          <p class="careers-lead">At Akash NextGen IT, we believe great careers are built through continuous learning, innovation, collaboration and solving real-world problems.</p>
+          <div class="careers-hero-actions">
+            <a class="button button-secondary" href="#careers-life">Life at Akash NextGen IT</a>
+            <a class="button button-primary" href="mailto:akashnextgenit@gmail.com?subject=Job%20Application&amp;body=Hello%20Akash%20NextGen%20IT%20Team%2C%0A%0AI%20would%20like%20to%20apply%20for%20future%20career%20opportunities.%0A%0AName%3A%0APhone%3A%0AEmail%3A%0APosition%3A%0AExperience%3A%0APortfolio%3A%0ALinkedIn%3A%0A%0APlease%20find%20my%20resume%20attached.%0A%0AThank%20You.">akashnextgenit@gmail.com</a>
+          </div>
+        </div>
+        <div class="careers-hero-media reveal">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Team collaborating around laptops in a modern software company office" loading="lazy" width="1200" height="900">
+          <div class="careers-hero-media-badge"><span aria-hidden="true">✦</span> Building tomorrow's technology, together</div>
+        </div>
+      </div>
+
+      <!-- 2. Why join us -->
+      <div class="container">
+        <div class="section-heading center reveal" style="margin-left:auto;margin-right:auto;"><p class="eyebrow"><span></span> Why work with us</p><h2>More than just a job</h2><p>We create an environment where you can learn, grow and do your best work.</p></div>
+        <ul class="careers-why-grid reveal">
+          <li class="careers-why-card"><span class="careers-why-icon" aria-hidden="true">📚</span><h3>Learning Culture</h3><p>Continuous learning is built into how we work, not an afterthought.</p></li>
+          <li class="careers-why-card"><span class="careers-why-icon" aria-hidden="true">🛠️</span><h3>Real Projects</h3><p>Work on real client products from day one, not busywork.</p></li>
+          <li class="careers-why-card"><span class="careers-why-icon" aria-hidden="true">⚙️</span><h3>Latest Technologies</h3><p>Build with modern, production-grade tools and frameworks.</p></li>
+          <li class="careers-why-card"><span class="careers-why-icon" aria-hidden="true">🤍</span><h3>Friendly Environment</h3><p>A small, supportive team where every voice is heard.</p></li>
+          <li class="careers-why-card"><span class="careers-why-icon" aria-hidden="true">🧭</span><h3>Mentorship</h3><p>Direct guidance from senior engineers on every project.</p></li>
+          <li class="careers-why-card"><span class="careers-why-icon" aria-hidden="true">💡</span><h3>Innovation First</h3><p>Ideas are welcomed and tested, wherever they come from.</p></li>
+          <li class="careers-why-card"><span class="careers-why-icon" aria-hidden="true">📈</span><h3>Career Growth</h3><p>Clear paths to take on more ownership as you grow.</p></li>
+          <li class="careers-why-card"><span class="careers-why-icon" aria-hidden="true">🌤️</span><h3>Flexible Work Culture</h3><p>We care about outcomes, not hours logged at a desk.</p></li>
+        </ul>
+      </div>
+
+      <!-- 3. Life at Akash NextGen IT -->
+      <div class="container" id="careers-life">
+        <div class="section-heading center reveal" style="margin-left:auto;margin-right:auto;"><p class="eyebrow"><span></span> Life at Akash NextGen IT</p><h2>A glimpse into our day-to-day</h2></div>
+        <div class="careers-gallery reveal">
+          <div class="careers-gallery-item tall"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Software team working together in a bright office" loading="lazy" width="700" height="900"></div>
+          <div class="careers-gallery-item"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Modern technology office interior" loading="lazy" width="700" height="500"></div>
+          <div class="careers-gallery-item tall"><img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Developer meeting with laptops around a table" loading="lazy" width="700" height="900"></div>
+          <div class="careers-gallery-item"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Close-up of a coding workspace with a laptop" loading="lazy" width="700" height="500"></div>
+          <div class="careers-gallery-item tall"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Startup team meeting and discussing ideas" loading="lazy" width="700" height="900"></div>
+        </div>
+      </div>
+
+      <!-- 4. Hiring status -->
+      <div class="container">
+        <div class="careers-empty reveal">
+          <span class="careers-empty-icon" aria-hidden="true">✦</span>
+          <h3>Join Our Talent Network</h3>
+          <p>We're always excited to connect with passionate developers, designers, AI engineers and technology enthusiasts. If you don't see a suitable opportunity today, send us your resume and we'll reach out when a matching role becomes available.</p>
+          <div class="careers-empty-actions">
+            <a class="button button-primary button-sm" href="mailto:akashnextgenit@gmail.com?subject=Job%20Application&amp;body=Hello%20Akash%20NextGen%20IT%20Team%2C%0A%0AI%20would%20like%20to%20apply%20for%20future%20career%20opportunities.%0A%0AName%3A%0APhone%3A%0AEmail%3A%0APosition%3A%0AExperience%3A%0APortfolio%3A%0ALinkedIn%3A%0A%0APlease%20find%20my%20resume%20attached.%0A%0AThank%20You.">akashnextgenit@gmail.com</a>
+            <a class="button button-secondary button-sm" href="https://www.linkedin.com/company/akash-nextgen-it/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Final CTA -->
+      <div class="container">
+        <div class="cta-banner careers-cta reveal">
+          <div><h3>Let's build the future together</h3><p>Have talent, passion and curiosity? We'd love to hear from you.</p></div>
+          <div class="cta-banner-actions">
+            <a class="button button-cta-white" href="mailto:akashnextgenit@gmail.com?subject=Job%20Application&amp;body=Hello%20Akash%20NextGen%20IT%20Team%2C%0A%0AI%20would%20like%20to%20apply%20for%20future%20career%20opportunities.%0A%0AName%3A%0APhone%3A%0AEmail%3A%0APosition%3A%0AExperience%3A%0APortfolio%3A%0ALinkedIn%3A%0A%0APlease%20find%20my%20resume%20attached.%0A%0AThank%20You.">akashnextgenit@gmail.com</a>
+            <a class="button button-secondary" href="#contact">Contact HR</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="surface contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-hero">
+          <div class="contact-intro reveal">
+            <p class="eyebrow"><span></span> Get in touch</p>
+            <h2 id="contact-title">Let's build<br>something<br><em>meaningful.</em></h2>
+            <p class="contact-intro-desc">Tell us about your requirements and we'll get back to you within one business day.</p>
+
+            <ul class="contact-perks">
+              <li class="contact-perk reveal reveal-delay-1">
+                <span class="contact-perk-icon" aria-hidden="true">⚡</span>
+                <div><h4>Quick response</h4><p>We reply within one business day.</p></div>
+              </li>
+              <li class="contact-perk reveal reveal-delay-2">
+                <span class="contact-perk-icon" aria-hidden="true">🔒</span>
+                <div><h4>Confidential</h4><p>Your project information stays secure.</p></div>
+              </li>
+              <li class="contact-perk reveal reveal-delay-3">
+                <span class="contact-perk-icon" aria-hidden="true">🤝</span>
+                <div><h4>No commitment</h4><p>Let's discuss your idea with no obligation.</p></div>
+              </li>
+            </ul>
+
+            <div class="contact-impact-card reveal">
+              <h3>Let's create<br>impact together</h3>
+              <p>Whether you're planning a business website, AI solution, mobile app or academic project, our team is ready to help.</p>
+            </div>
+          </div>
+
+          <div class="contact-panel reveal">
+            <div class="contact-panel-media">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Modern software development office workspace" loading="lazy" width="1200" height="800">
+              <div class="contact-panel-media-overlay"></div>
+            </div>
+
+            <div class="contact-form-card">
+              <p class="contact-label">Send us a message</p>
+              <h3>We'd love to hear about your project.</h3>
+              <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required></div>
+                  <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+                </div>
+                <div class="field"><label for="subject">Subject <span>(optional)</span></label><input id="subject" name="subject" type="text" placeholder="e.g. New website, mobile app, AI solution…"></div>
+                <div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" placeholder="Tell us a little about your project…" required></textarea></div>
+                <button class="button button-primary button-block contact-submit" type="submit">Send message<svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-cards reveal" aria-label="Contact information">
+          <div class="contact-card">
+            <span class="contact-card-icon" aria-hidden="true">📍</span>
+            <p class="contact-label">Location</p>
+            <p>Nagpur, Maharashtra, India</p>
+          </div>
+          <div class="contact-card">
+            <span class="contact-card-icon" aria-hidden="true">📧</span>
+            <p class="contact-label">Email</p>
+            <a href="mailto:akashnextgenit@gmail.com">akashnextgenit@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <span class="contact-card-icon" aria-hidden="true">💬</span>
+            <p class="contact-label">WhatsApp</p>
+            <a href="https://wa.me/918530393791" target="_blank" rel="noopener noreferrer">Chat with us<span class="visually-hidden"> (opens in a new tab)</span></a>
+          </div>
+          <div class="contact-card">
+            <span class="contact-card-icon" aria-hidden="true">🔗</span>
+            <p class="contact-label">Connect</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/akash-nextgen-it/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="https://www.instagram.com/akashnextgenit/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.24 2.22.41.56.21.96.47 1.38.89.42.42.68.82.89 1.38.17.42.36 1.05.41 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.8-.41 2.22-.21.56-.47.96-.89 1.38-.42.42-.82.68-1.38.89-.42.17-1.05.36-2.22.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.24-2.22-.41a3.72 3.72 0 0 1-1.38-.89 3.72 3.72 0 0 1-.89-1.38c-.17-.42-.36-1.05-.41-2.22-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.8.41-2.22.21-.56.47-.96.89-1.38.42-.42.82-.68 1.38-.89.42-.17 1.05-.36 2.22-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38A5.88 5.88 0 0 0 .63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.66.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.66 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg></a>
+              <a href="https://github.com/AkashChachere" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-map-row reveal">
+          <div class="map-embed contact-map"><iframe src="https://www.google.com/maps?q=Nagpur,Maharashtra,India&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Akash NextGen IT location — Nagpur, Maharashtra"></iframe></div>
+          <div class="contact-visit-card">
+            <h3>Visit our office</h3>
+            <p>You're always welcome to schedule a meeting or drop by during business hours.</p>
+            <a class="button button-secondary button-sm" href="https://www.google.com/maps?q=Nagpur,Maharashtra,India" target="_blank" rel="noopener noreferrer">Get directions<svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 
-  <footer><div class="container footer-content"><a class="brand footer-brand" href="#hero"><img src="logo-256.png" width="42" height="42" alt=""><span>Akash NextGen IT<small>Innovating Tomorrow, Today.</small></span></a><p>© <span id="year"></span> Akash NextGen IT. All rights reserved.</p><a href="#main">Back to top ↑</a></div></footer>
+  <section class="sfoot-cta-section">
+    <div class="container">
+      <div class="sfoot-cta reveal">
+        <div class="sfoot-cta-mesh" aria-hidden="true"></div>
+        <div class="sfoot-cta-grid">
+          <div class="sfoot-cta-copy">
+            <span class="sfoot-badge">🚀 Let's work together</span>
+            <h2>Let's Build Something<br><em>Extraordinary</em> Together</h2>
+            <p>Whether you're a startup, business or student, we're here to transform your ideas into modern digital solutions.</p>
+            <div class="sfoot-cta-actions">
+              <a class="button button-primary" href="#contact-form">Start Your Project<svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="sfoot-btn-ghost" href="https://wa.me/918530393791" target="_blank" rel="noopener noreferrer">Book Free Consultation<span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+          <ul class="sfoot-feature-grid">
+            <li class="sfoot-feature-card"><span class="sfoot-feature-icon" aria-hidden="true">⚡</span><h3>Fast Response</h3><p>We reply within one business day.</p></li>
+            <li class="sfoot-feature-card"><span class="sfoot-feature-icon" aria-hidden="true">🔒</span><h3>Secure Process</h3><p>Your information is always protected.</p></li>
+            <li class="sfoot-feature-card"><span class="sfoot-feature-icon" aria-hidden="true">💼</span><h3>Professional Team</h3><p>Skilled engineers ready to help.</p></li>
+            <li class="sfoot-feature-card"><span class="sfoot-feature-icon" aria-hidden="true">🎯</span><h3>Quality Delivery</h3><p>Built to last, not just to ship.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sfoot">
+    <div class="sfoot-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="sfoot-columns">
+        <div class="sfoot-col sfoot-col-brand reveal">
+          <a class="sfoot-brand" href="#hero" aria-label="Akash NextGen IT home"><img src="logo-256.png" width="42" height="42" alt="Akash NextGen IT logo"><span>Akash NextGen IT<small>Innovating Tomorrow, Today.</small></span></a>
+          <p class="sfoot-desc">Building modern software solutions, AI products, websites and mobile applications for businesses, startups and students.</p>
+          <div class="sfoot-socials">
+            <a href="https://wa.me/918530393791" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (opens in a new tab)"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.01 2C6.48 2 2 6.48 2 12.01c0 1.98.55 3.83 1.5 5.41L2 22l4.72-1.44a9.96 9.96 0 0 0 5.29 1.5h.01c5.52 0 10-4.48 10-10.01C22 6.48 17.53 2 12.01 2zm5.86 14.27c-.25.7-1.24 1.28-2.02 1.44-.55.11-1.26.2-3.65-.78-3.07-1.27-5.05-4.37-5.2-4.57-.15-.2-1.24-1.65-1.24-3.15 0-1.5.78-2.23 1.06-2.53.28-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.28.1 1.75.83 2.05 .98.3.15.5.23.58.35.08.13.08.75-.17 1.44z"/></svg></a>
+            <a href="https://www.instagram.com/akashnextgenit/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.24 2.22.41.56.21.96.47 1.38.89.42.42.68.82.89 1.38.17.42.36 1.05.41 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.8-.41 2.22-.21.56-.47.96-.89 1.38-.42.42-.82.68-1.38.89-.42.17-1.05.36-2.22.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.24-2.22-.41a3.72 3.72 0 0 1-1.38-.89 3.72 3.72 0 0 1-.89-1.38c-.17-.42-.36-1.05-.41-2.22-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.8.41-2.22.21-.56.47-.96.89-1.38.42-.42.82-.68 1.38-.89.42-.17 1.05-.36 2.22-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38A5.88 5.88 0 0 0 .63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.66.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.66 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg></a>
+            <a href="https://www.linkedin.com/company/akash-nextgen-it/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+            <a href="https://github.com/AkashChachere" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="sfoot-col reveal">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#academic">Projects</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="sfoot-col reveal">
+          <h5>Services</h5>
+          <ul id="footer-services"></ul>
+        </div>
+
+        <div class="sfoot-col reveal">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#academic">Portfolio</a></li>
+            <li><a href="#services">Technologies</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="sfoot-col reveal">
+          <h5>Contact</h5>
+          <ul class="sfoot-contact-list">
+            <li><svg class="sfoot-contact-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Nagpur, Maharashtra, India</span></li>
+            <li><svg class="sfoot-contact-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:akashnextgenit@gmail.com">akashnextgenit@gmail.com</a></li>
+            <li><svg class="sfoot-contact-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3h5l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v5a2 2 0 0 1-2 2C9.16 21 3 14.84 3 5a2 2 0 0 1 0-2z"/></svg><a href="https://wa.me/918530393791" target="_blank" rel="noopener noreferrer">WhatsApp Chat<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><svg class="sfoot-contact-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span>Monday – Saturday</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sfoot-newsletter reveal">
+        <div class="sfoot-newsletter-copy">
+          <h4>Stay Updated</h4>
+          <p>Subscribe to receive technology insights, project updates and company news.</p>
+        </div>
+        <form class="sfoot-newsletter-form" id="footer-newsletter-form" novalidate>
+          <input type="email" name="email" id="footer-newsletter-email" placeholder="Enter your email address" required aria-label="Email address">
+          <button type="submit">Subscribe<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <ul class="sfoot-newsletter-notes">
+          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>No spam</li>
+          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Weekly updates</li>
+          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 12v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7"/><path d="M2 7h20v5H2z"/><path d="M12 22V7M12 7c-1.5 0-3-1-3-2.5S10.5 2 12 2s3 1 3 2.5S13.5 7 12 7Zm0 0c1.5 0 3-1 3-2.5"/></svg>Exclusive content</li>
+        </ul>
+      </div>
+
+      <div class="sfoot-bottom">
+        <p>© <span id="year"></span> Akash NextGen IT. All rights reserved.</p>
+        <p class="sfoot-bottom-credit">Designed &amp; developed by <strong>Akash NextGen IT</strong></p>
+        <div class="sfoot-bottom-links">
+          <a href="#contact">Privacy Policy</a>
+          <a href="#contact">Terms</a>
+          <a href="#contact">Cookies</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var form = document.getElementById('footer-newsletter-form');
+      if (!form) return;
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var email = document.getElementById('footer-newsletter-email').value.trim();
+        if (!email) return;
+        var subject = encodeURIComponent('Newsletter Subscription');
+        var body = encodeURIComponent('Please subscribe this email to the Akash NextGen IT newsletter:\n\n' + email);
+        window.location.href = 'mailto:akashnextgenit@gmail.com?subject=' + subject + '&body=' + body;
+      });
+    })();
+  </script>
   <script src="js/runtime-config.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script type="module" src="js/app.js"></script>
+  <script src="js/about-extras.js"></script>
 </body>
 </html>
