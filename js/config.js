@@ -1,14 +1,6 @@
 export const company = { name: 'Akash NextGen IT', email: 'akashnextgenit@gmail.com', website: 'https://akashnextgenit.vercel.app/' };
 export const apiBaseUrl = String(window.AKASH_API_URL || '').replace(/\/$/, '');
 
-export const technologies = ['React', 'Next.js', 'Node.js', 'MongoDB', 'Flutter', 'Firebase', 'Tailwind', 'Express', 'GitHub', 'Docker', 'Python', 'Java'];
-
-export const stack = [
-  ['React', '#2563EB'], ['Next.js', '#0F172A'], ['Node.js', '#16A34A'], ['MongoDB', '#059669'],
-  ['Flutter', '#06B6D4'], ['Firebase', '#F59E0B'], ['Tailwind', '#06B6D4'], ['Express', '#334155'],
-  ['GitHub', '#0F172A'], ['Docker', '#2563EB'], ['Python', '#7C3AED'], ['Java', '#DC2626']
-];
-
 export const services = [
   ['◈', 'Custom Software Development', 'Software tailored to your workflows and requirements.'],
   ['⌘', 'Website Development', 'Modern, responsive websites built for clarity and performance.'],
@@ -25,8 +17,60 @@ export const services = [
 ];
 
 export const projects = [
-  { name: 'Nanda Luxury Yacht', type: 'Project in progress', description: 'Project details will be shared when available.', badges: ['React', 'Node.js'] },
-  { name: 'Akash NextGen IT Website', type: 'Company website', description: 'The official website for Akash NextGen IT.', badges: ['HTML5', 'CSS3', 'JavaScript'] }
+  {
+    name: 'Multi-Vendor E-Commerce Marketplace',
+    type: 'E-Commerce Platform',
+    description: 'A large-scale, Amazon-style marketplace with seller dashboards, cart, secure payments, order tracking and inventory management.',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=900&auto=format&fit=crop',
+    badges: ['React', 'Node.js', 'MongoDB', 'Redis', 'Stripe'],
+    link: '',
+    linkLabel: ''
+  },
+  {
+    name: 'Cloud-Native SaaS Dashboard',
+    type: 'Cloud Platform',
+    description: 'A Google Cloud-style admin console with role-based access, live monitoring and horizontally scalable infrastructure.',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=900&auto=format&fit=crop',
+    badges: ['React', 'AWS', 'Docker', 'Kubernetes'],
+    link: '',
+    linkLabel: ''
+  },
+  {
+    name: 'AI-Powered Recommendation Engine',
+    type: 'AI & Machine Learning',
+    description: 'A personalization engine in the mould of Amazon and Netflix recommendation systems, serving predictions in real time.',
+    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=900&auto=format&fit=crop',
+    badges: ['Python', 'TensorFlow', 'FastAPI', 'Redis'],
+    link: '',
+    linkLabel: ''
+  },
+  {
+    name: 'Real-Time Analytics & BI Dashboard',
+    type: 'Data Platform',
+    description: 'An enterprise business-intelligence dashboard streaming live metrics with sub-second updates and rich visualisations.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop',
+    badges: ['Next.js', 'PostgreSQL', 'D3.js', 'WebSockets'],
+    link: '',
+    linkLabel: ''
+  },
+  {
+    name: 'Enterprise Video Streaming Platform',
+    type: 'Streaming Platform',
+    description: 'A scalable video delivery platform with adaptive bitrate streaming, transcoding pipelines and a global CDN, built to a YouTube-grade standard.',
+    image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=900&auto=format&fit=crop',
+    badges: ['Node.js', 'FFmpeg', 'AWS S3', 'CloudFront'],
+    link: '',
+    linkLabel: ''
+  },
+  {
+    name: 'Scalable Search & Discovery Engine',
+    type: 'Search Platform',
+    description: 'A Google-style search and discovery engine with fuzzy matching, faceted filters and millisecond query response at scale.',
+    image: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=900&auto=format&fit=crop',
+    badges: ['Elasticsearch', 'Node.js', 'React', 'Redis'],
+    link: '',
+    linkLabel: ''
+  }
 ];
 
 export const academicServices = [
@@ -102,16 +146,4 @@ export const processSteps = [
   ['Launch & Support', 'We ship, monitor, and stay on for support and iteration.']
 ];
 
-export const skills = [
-  ['Full-stack development', 92],
-  ['UI/UX design', 85],
-  ['Cloud & deployment', 80],
-  ['AI & automation', 75]
-];
 
-export const timeline = [
-  ['2022', 'Founded', 'Akash NextGen IT started as a freelance software practice in Nagpur.'],
-  ['2023', 'First enterprise clients', 'Expanded into full-stack web and mobile delivery for growing businesses.'],
-  ['2024', 'Academic program launched', 'Began guiding students through final year and minor projects.'],
-  ['2025', 'AI & cloud focus', 'Added AI integrations and cloud-native architecture to our core offering.']
-];

@@ -1,6 +1,6 @@
 import {
-  services, technologies, academicServices, academicIncludes, academicTech,
-  whyChooseUs, stats, processSteps, skills, timeline,
+  services, projects, academicServices, academicIncludes, academicTech,
+  whyChooseUs, stats, processSteps,
   showcaseStats, showcaseServices, showcaseTech
 } from './config.js';
 import { icon, techIcon, showcaseIcon } from './academic-icons.js';
@@ -55,15 +55,26 @@ function renderShowcase() {
   }
 }
 
-function renderServices() {
-  // Legacy service grid — no longer rendered; kept only if #services-grid exists elsewhere.
-  const grid = byId('services-grid');
+function renderProjects() {
+  const grid = byId('project-cards');
   if (!grid) return;
-  grid.innerHTML = services.map(([icon, title, description]) => `
-    <li class="service-card reveal">
-      <span class="service-icon" aria-hidden="true">${icon}</span>
-      <h3>${title}</h3>
-      <p>${description}</p>
+  grid.innerHTML = projects.map((p) => `
+    <li class="project-card reveal">
+      <div class="project-art">
+        <img src="${p.image}" alt="${p.name}" loading="lazy" width="700" height="420">
+        <span class="project-status${p.link ? ' is-live' : ''}">${p.type}</span>
+      </div>
+      <div class="project-content">
+        <span class="project-tag">${p.badges[0] || ''}</span>
+        <h3>${p.name}</h3>
+        <p>${p.description}</p>
+        <div class="project-badges">${p.badges.map((b) => `<span>${b}</span>`).join('')}</div>
+        <div class="project-links">
+          ${p.link
+            ? `<a class="button button-secondary button-sm" href="${p.link}" target="_blank" rel="noopener noreferrer">${p.linkLabel || 'View Project'}<span class="visually-hidden"> (opens in a new tab)</span></a>`
+            : `<a class="button button-secondary button-sm" href="#contact">Ask About This<svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>`}
+        </div>
+      </div>
     </li>`).join('');
 }
 
@@ -105,32 +116,16 @@ function renderProcess() {
     </div>`).join('');
 }
 
-function renderAboutExtras() {
-  const skillBars = byId('skill-bars');
-  if (skillBars) {
-    skillBars.innerHTML = skills.map(([name, pct]) => `
-      <div class="skill-item">
-        <div class="skill-bar-row"><span>${name}</span><span>${pct}%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="${pct}"></div></div>
-      </div>`).join('');
-  }
-  const timelineList = byId('timeline-list');
-  if (timelineList) {
-    timelineList.innerHTML = timeline.map(([year, title, desc]) => `
-      <div class="timeline-item"><p class="timeline-year">${year}</p><h4>${title}</h4><p>${desc}</p></div>`).join('');
-  }
-}
-
 function renderFooter() {
   byId('footer-services').innerHTML = services.slice(0, 5).map(([, title]) => `<li><a href="#services">${title}</a></li>`).join('');
 }
 
 export function renderContent() {
   renderShowcase();
+  renderProjects();
   renderAcademic();
   renderWhy();
   renderProcess();
-  renderAboutExtras();
   renderFooter();
   byId('year').textContent = new Date().getFullYear();
 }
