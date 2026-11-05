@@ -1,0 +1,7 @@
+import mongoose from 'mongoose';
+import { env, mongoSummary } from './env.js';
+
+const options = { serverSelectionTimeoutMS: 10000, connectTimeoutMS: 10000, socketTimeoutMS: 45000, maxPoolSize: 10, minPoolSize: 0, retryWrites: true };
+function directUri() { if (!env.mongoDirectSeeds || !env.mongoReplicaSet) return null; const source = new URL(env.mongoUri); return `mongodb://${source.username}:${source.password}@${env.mongoDirectSeeds}${source.pathname}?authSource=admin&replicaSet=${encodeURIComponent(env.mongoReplicaSet)}&tls=true&retryWrites=true&w=majority`; }
+export async function connectDatabase() { mongoose.set('strictQuery', true); const summary = mongoSummary(); try { await mongoose.connect(env.mongoUri, options); console.info(`✓ MongoDB Connected (${summary.protocol}//${summary.host}/${summary.database})`); return { method: 'srv', ...summary }; } catch (error) { const fallback = directUri(); const dnsFailure = ['ECONNREFUSED', 'ETIMEOUT', 'ENOTFOUND'].includes(error?.code) || /querySrv/i.test(error?.message || ''); if (!fallback || !dnsFailure) throw error; console.warn(`MongoDB SRV lookup failed (${error.code || 'querySrv'}); trying configured direct replica-set fallback.`); await mongoose.connect(fallback, options); console.info(`✓ MongoDB Connected (direct://${summary.host}/${summary.database})`); return { method: 'direct', ...summary }; } }
+export async function disconnectDatabase() { if (mongoose.connection.readyState !== 0) await mongoose.disconnect(); }

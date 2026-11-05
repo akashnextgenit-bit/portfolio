@@ -1,0 +1,3 @@
+import mongoose from 'mongoose'; import bcrypt from 'bcryptjs';
+const schema = new mongoose.Schema({ name:{type:String,trim:true,maxlength:100}, email:{type:String,required:true,unique:true,lowercase:true,trim:true}, passwordHash:{type:String,required:true,select:false}, role:{type:String,enum:['admin','editor'],default:'admin'}, isActive:{type:Boolean,default:true}, tokenVersion:{type:Number,default:0}, resetTokenHash:String, resetTokenExpires:Date }, {timestamps:true});
+schema.methods.verifyPassword = function(password) { return bcrypt.compare(password, this.passwordHash); }; export const Admin = mongoose.model('Admin', schema);

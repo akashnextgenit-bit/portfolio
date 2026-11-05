@@ -1,0 +1,162 @@
+/* =========================================================
+   Akash NextGen IT — About and Academic sections
+   Calm, corporate layout built on the core tokens in style.css
+   ========================================================= */
+
+.section-label {
+  display: flex; align-items: center; gap: 10px; margin: 0 0 16px;
+  font-family: var(--font-display); font-weight: 600; font-size: .92rem; color: var(--primary);
+}
+.section-label::before { content: ''; width: 24px; height: 2px; background: var(--primary); }
+
+/* ---------- About ---------- */
+.about { padding: 104px 0 88px; background: var(--bg); }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 72px; align-items: start; }
+.about-main h1 { font-size: clamp(2rem, 3.6vw, 2.9rem); line-height: 1.15; margin-bottom: 22px; }
+.about-main p { color: var(--slate-600); font-size: 1.04rem; line-height: 1.75; max-width: 62ch; margin: 0 0 16px; }
+.about-main .about-lead { color: var(--text); font-size: 1.2rem; line-height: 1.6; font-weight: 500; margin-bottom: 22px; }
+
+.about-panel { background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 32px; }
+.about-sub { font-size: 1.15rem; margin-bottom: 20px; }
+.check-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.check-list li { position: relative; padding-left: 32px; font-weight: 500; color: var(--slate-700); line-height: 1.4; }
+.check-list li::before {
+  content: ''; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--primary-100) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+
+.about-facts {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin: 64px 0 0; padding: 32px 0 0;
+  border-top: 1px solid var(--border);
+}
+.about-facts dt { font-family: var(--font-display); font-weight: 700; font-size: 1.02rem; color: var(--text); margin-bottom: 6px; }
+.about-facts dd { margin: 0; color: var(--text-muted); font-size: .95rem; line-height: 1.55; }
+
+/* ---------- Academic ---------- */
+.academic-section { padding: 96px 0; }
+.acad-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 64px; }
+.acad-head h2 { font-size: clamp(2rem, 3.4vw, 2.7rem); line-height: 1.15; margin-bottom: 16px; }
+.acad-lead { color: var(--text-muted); font-size: 1.08rem; line-height: 1.65; max-width: 56ch; margin: 0; }
+
+.acad-block { margin-bottom: 56px; }
+.acad-sub { font-size: 1.1rem; margin-bottom: 20px; }
+
+/* Categories: one framed table of six cells separated by hairlines */
+.acad-categories {
+  list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden;
+}
+.acad-category { background: var(--surface); padding: 28px 26px; }
+.acad-icon {
+  width: 40px; height: 40px; border-radius: 10px; margin-bottom: 18px; display: flex; align-items: center; justify-content: center;
+  background: var(--primary-100); color: var(--primary);
+}
+.acad-icon svg { width: 20px; height: 20px; }
+.acad-category h4 { font-size: 1.02rem; margin-bottom: 6px; line-height: 1.3; }
+.acad-category p { margin: 0; color: var(--text-muted); font-size: .92rem; line-height: 1.55; }
+
+/* What's included: checklist in two columns */
+.acad-included { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.acad-item { display: flex; align-items: flex-start; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--border); }
+.acad-check {
+  flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; margin-top: 1px; display: flex; align-items: center; justify-content: center;
+  background: var(--primary-100); color: var(--primary);
+}
+.acad-check svg { width: 13px; height: 13px; }
+.acad-item h4 { font-size: 1rem; margin-bottom: 3px; }
+.acad-item p { margin: 0; color: var(--text-muted); font-size: .92rem; line-height: 1.55; }
+
+/* Technologies */
+.acad-tech { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.acad-tech li { padding: 9px 16px; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); font-size: .92rem; font-weight: 500; color: var(--slate-700); }
+
+/* Closing call to action */
+.acad-cta {
+  display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 72px; padding: 44px 52px;
+  border-radius: var(--radius-lg); background: var(--dark);
+}
+.acad-cta h3 { color: #fff; font-size: clamp(1.4rem, 2.4vw, 1.85rem); line-height: 1.25; margin-bottom: 8px; }
+.acad-cta p { margin: 0; color: rgba(255,255,255,.72); font-size: 1.02rem; }
+.acad-cta-actions { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+.acad-cta-outline { color: #fff; border-color: rgba(255,255,255,.35); }
+.acad-cta-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+/* ---------- Responsive (About + Academic) ---------- */
+@media (max-width: 1040px) {
+  .about-grid { gap: 48px; }
+  .acad-categories { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .about { padding: 56px 0 64px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-facts { margin-top: 44px; }
+  .academic-section { padding: 64px 0; }
+  .acad-head { flex-direction: column; align-items: flex-start; margin-bottom: 44px; }
+  .acad-included { grid-template-columns: 1fr; }
+  .acad-cta { flex-direction: column; align-items: flex-start; padding: 36px 28px; }
+}
+@media (max-width: 600px) {
+  .about-panel { padding: 24px 20px; }
+  .about-facts { grid-template-columns: 1fr; gap: 22px; }
+  .acad-categories { grid-template-columns: 1fr; }
+  .acad-cta-actions, .acad-cta-actions .button { width: 100%; }
+}
+
+/* =========================================================
+   Cross-device hardening: iPhone / Android / iPad / laptop
+   ========================================================= */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+body { overflow-x: clip; }
+img, svg, video, canvas, iframe { max-width: 100%; }
+img { height: auto; }
+
+/* notches and rounded corners (iPhone landscape, Android cutouts) */
+.container { padding-left: max(24px, env(safe-area-inset-left)); padding-right: max(24px, env(safe-area-inset-right)); }
+.site-header { padding-top: env(safe-area-inset-top, 0px); }
+.wa-float { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); }
+.sfoot-bottom { padding-bottom: max(0px, env(safe-area-inset-bottom)); }
+
+/* comfortable touch targets */
+.button { min-height: 44px; }
+.menu-button { min-width: 44px; min-height: 44px; }
+.mobile-menu a { min-height: 44px; display: flex; align-items: center; }
+
+/* shared icon sizing for the inline svg icons */
+.contact-perk-icon svg, .contact-card-icon svg, .sfoot-feature-icon svg, .careers-empty-icon svg { width: 20px; height: 20px; }
+.contact-card-icon, .contact-perk-icon { color: var(--primary); }
+.why-icon svg { width: 22px; height: 22px; }
+
+/* contact info: three cards */
+.contact-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.contact-cards + * { margin-top: 0; }
+.contact-section { padding-bottom: 76px; }
+
+/* iOS Safari zooms into inputs under 16px */
+@media (max-width: 900px) {
+  input, select, textarea, .field input, .field textarea { font-size: 16px; }
+}
+@media (max-width: 760px) {
+  .contact-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .container { padding-left: max(18px, env(safe-area-inset-left)); padding-right: max(18px, env(safe-area-inset-right)); }
+}
+@media (hover: none) {
+  .button:hover, .why-card:hover, .project-card:hover { transform: none; }
+}
+
+/* hero: headline first on small screens, with a shorter photo below */
+@media (max-width: 920px) {
+  .hero-visual { order: 0; height: 240px; margin: 8px 0 0; }
+}
+
+/* tablet: email card gets its own row so the address never wraps mid-word */
+@media (min-width: 761px) and (max-width: 999px) {
+  .contact-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-cards .contact-card:first-child { grid-column: 1 / -1; }
+}
+.contact-card a { overflow-wrap: break-word; word-break: normal; }
+
+/* tidy headings and a safe fallback if a remote photo fails to load */
+h1, h2, h3 { text-wrap: balance; }
+.hero-photo-frame, .contact-panel-media, .project-media { background-color: var(--slate-800); }

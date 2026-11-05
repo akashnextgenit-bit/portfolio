@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+const schema=new mongoose.Schema({title:{type:String,required:true,trim:true,maxlength:120},location:{type:String,trim:true,maxlength:120},employmentType:{type:String,enum:['full_time','part_time','contract','internship'],required:true},description:{type:String,required:true,trim:true,maxlength:20000},status:{type:String,enum:['draft','published','closed'],default:'draft',index:true},publishedAt:Date},{timestamps:true}); export const Job=mongoose.model('Job',schema);

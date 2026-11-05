@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akashnextgenit.vercel.app/sitemap.xml
